@@ -2,7 +2,7 @@ name: Build and release apk
 
 on:
   push:
-    tag:
+    tags:
       - "v*"
 
 jobs:
