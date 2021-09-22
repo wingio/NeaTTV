@@ -2,8 +2,8 @@ name: Build and release apk
 
 on:
   push:
-    branches:
-      - main
+    tag:
+      - "v*"
 
 jobs:
   build:
