@@ -18,7 +18,7 @@ import xyz.wingio.neattv.models.user.User
 
 
 class WidgetUserProfile(ctx: Context) : ConstraintLayout(ctx) {
-    lateinit var binding: UserProfileBinding
+    var binding: UserProfileBinding
 
     init {
         LayoutInflater.from(ctx).inflate(R.layout.profile_header, this)
