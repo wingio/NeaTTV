@@ -1,9 +1,7 @@
 name: Build and release apk
 
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_dispatch
 
 jobs:
   build:
@@ -28,8 +26,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ github.event.head_commit.message }}
+          release_name: Release ${{ github.event.head_commit.message }}
           draft: true
           prerelease: true
       - name: Upload Release Asset
@@ -42,3 +40,9 @@ jobs:
           asset_path: app/build/outputs/apk/debug/app-debug.apk
           asset_name: app-debug.apk
           asset_content_type: application/zip
+      - name: Push build to Discord
+        uses: sinshutu/upload-to-discord@v2.0.0
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.WEBHOOK }}
+        with:
+          args: app/build/outputs/apk/debug/app-debug.apk
