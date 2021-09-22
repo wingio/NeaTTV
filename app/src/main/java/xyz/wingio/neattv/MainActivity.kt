@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         Fresco.initialize(this)
         setContentView(R.layout.splash_layout)
        var profile : WidgetUserProfile = WidgetUserProfile(this)
-       profile.setUser(User("Wing"))
+       profile.setUser(User("Test User"))
         addContentView(profile, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
        window.clearFlags(Window.FEATURE_ACTION_BAR)
        supportActionBar?.hide()
