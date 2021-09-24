@@ -12,8 +12,8 @@ android {
         applicationId "xyz.wingio.neattv"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 1
-        versionName "v0.0.1 - ALPHA"
+        versionCode 2
+        versionName "v0.0.2 - ALPHA"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

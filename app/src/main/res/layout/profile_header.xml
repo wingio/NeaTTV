@@ -18,27 +18,54 @@
 
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/avatar"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="85dp"
         android:elevation="1dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="80dp"
-        android:layout_marginStart="20dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/username_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
+        android:layout_marginStart="130dp"
         android:ellipsize="end"
+        android:fontFamily="@font/roobert_semibold"
         android:maxLines="1"
         android:text="@string/username_placeholder"
-        android:textSize="20sp"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@+id/banner"
-        android:textAlignment="viewStart"/>
+        app:layout_constraintVertical_bias="0.154" />
+
+    <TextView
+        android:id="@+id/user_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:textAlignment="viewStart"
+        android:fontFamily="@font/roobert_medium"
+        android:text="@string/last_stream"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toBottomOf="@+id/username_text"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/user_bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bio_placeholder"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/avatar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roobert_regular" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

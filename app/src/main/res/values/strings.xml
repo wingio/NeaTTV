@@ -2,4 +2,6 @@
     <string name="app_name">NeaTTV</string>
     <string name="send_message_placeholder">Send a message</string>
     <string name="username_placeholder">EMPTY_USERNAME</string>
+    <string name="last_stream">Last live</string>
+    <string name="bio_placeholder">No bio</string>
 </resources>
